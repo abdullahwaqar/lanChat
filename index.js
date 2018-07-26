@@ -1,24 +1,14 @@
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var socket = require('socket.io')(http);
 
 //Setting Express
 app.use(express.static('public'));
 
 //Setting up sockets
-io.on('connection', function(socket) {
-    console.log('user connected');
-
-    //Play Video all clients
-    socket.on('play', function() {
-        io.emit('play');
-    });
-
-    //Pause Video all clients
-    socket.on('pause', function() {
-        io.emit('pause');
-    });
+socket.on('connection', function(socket) {
+    console.log('user connected ->', socket.id);
 });
 
 //Setting up server for listening
