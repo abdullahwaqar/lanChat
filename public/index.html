@@ -7,29 +7,27 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<script type="text/javascript" src="includes/csi.js/csi.min.js"></script>
 </head>
 <body>
-	<!-- Including BackGround -->
-	<div data-include="bg.html"></div>
-	<!-- Chat Interface Structure Starts here -->
-	<div class="chat_container">
-	  <div class="bubble"></div>
-	  <div class="chat">
-	    <ul class="chat-thread">
-	      <li class="message-mit">Hi Codepen!</li>
-	      <li class="message-dest">Hi, what are you going to do today?</li>
-	      <!-- <li class="message-mit loading"><i class="material-icons">lens</i><i class="material-icons">lens</i><i class="material-icons">lens</i></li> -->
-	    </ul>
-	    <div class="textbox"><input class="input" type="text"><span class="send"><i class="material-icons">send</i></span></div>
-	  </div>
+	<!-- Chat Interface Starts -->
+	<div id="title-chat">
+		<h2>lanChat</h2>
+		<div id="chat-window">
+			<div id="output"></div>
+			<div id="feedback"></div>
+		</div>
+		<input id="handle" type="text" placeholder="Handle" />
+		<input id="message" type="text" placeholder="Message" />
+		<button id="send">Send</button>
 	</div>
+	<!-- Background HTML include -->
+	<div data-include="bg.html"></div>
 	<!-- Chat Interface Structure Ends here -->
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
-	<script src="js/index.js"></script>
 	<script src="js/chat.js"></script>
 
 </body>
