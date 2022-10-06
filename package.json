@@ -4,7 +4,8 @@
   "description": "Real time chat app created using Node.js and Sockets.io",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
