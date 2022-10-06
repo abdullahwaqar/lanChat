@@ -1,10 +1,13 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 //Setting Express
 app.use(express.static('public'));
+
+app.use(cors());
 
 //Setting up sockets
 io.on('connection', function (socket) {
